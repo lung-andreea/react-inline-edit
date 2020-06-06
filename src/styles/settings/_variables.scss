@@ -1,0 +1,82 @@
+@import "typography";
+
+// Colors
+// --------------------------------------------------
+
+$blue40: #55bee7;
+$blue60: #049dda;
+$blue80: #004f6e;
+
+$grey20: #d2d4d5;
+$grey30: #bcbec0;
+$grey40: #939598;
+$grey50: #6d6e71;
+$grey60: #525355;
+$grey70: #373739;
+
+$white: #ffffff;
+$black: #000000;
+
+// Core Colors
+$red: #8e1216;
+$orange: #e98312;
+$yellow: #ffd900;
+$green: #4f7b02;
+$blue: #0176a4;
+$purple: #8f2b8c;
+
+/// Color for Hyperlinks (unvisited)
+$hyperlink: $blue80;
+
+$color-icon-default: $grey60;
+$color-border-default: $grey30;
+$color-icon-default--hover: $blue80;
+$color-icon-default--disabled: $grey30;
+
+
+// Text colors
+// --------------------------------------------------
+
+$color-text-default: $grey70;
+
+$color-background-default: $white;
+
+$color-text-placeholder: $grey40;
+
+$color-text-link: $hyperlink;
+
+$color-text-link--hover: $hyperlink;
+
+$color-text-link--disabled: $grey40;
+
+$color-text-link-secondary: $grey70;
+
+$color-text-link-secondary--hover: $grey70;
+
+$color-text-link-secondary--disabled: $grey40;
+
+$color-text-link-light: $white;
+
+$color-text-link-light--hover: $grey30;
+
+$color-text-link-light--disabled: $grey50;
+
+
+// Spacing
+// --------------------------------------------------
+
+$pixels-per-rem: 16;
+$spacing-base: $pixels-per-rem * 1px;
+$spacing-small: floor($spacing-base * 0.75); // 12px
+
+
+//Form-Input Variables
+$form-input-line-height: 1.5em;
+$form-input-border-width: 1px;
+$form-input-right-left-padding: 7px;
+$form-input-top-padding: 4px;
+$form-input-bottom-padding: 5px;
+
+
+
+

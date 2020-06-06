@@ -1,0 +1,49 @@
+@import '../../settings/variables';
+@import '../../mixins/mixins';
+
+$default-search-font-size: 14px;
+$default-search-icon-color: $grey50;
+
+%inputs_default {
+    font-size: 14px;
+    @include placeholder($color-text-placeholder);
+
+    &[type='select'] {
+        border: 1px solid $color-border-default;
+        height: 24px;
+        margin-left: 4px;
+    }
+
+    &[type='text'],
+    &[type='password'],
+    &[type='email'],
+    &[type='search'] {
+        color: $grey50;
+        padding: 4px;
+        border: 1px solid $color-border-default;
+
+        &::-ms-clear {
+            display: none;
+        }
+    }
+}
+
+%search-input-default {
+    height: 30px;
+    line-height: 22px;
+    border: 1px solid $color-border-default;
+    color: $color-text-default;
+    background: $color-background-default;
+    font-family: inherit;
+    font-size: $default-search-font-size;
+    float: left;
+    width: calc(100% - 32px);
+    border-radius: 0;
+    box-sizing: border-box;
+    appearance: none;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button {
+        appearance: none;
+    }
+}

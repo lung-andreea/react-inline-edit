@@ -1,0 +1,140 @@
+@import '../../settings/variables';
+@import '../../mixins/mixins';
+
+.inline-edit {
+    $text-area-min-height: 100px;
+    $button-side: 34px;
+    display: flex;
+
+    &__display-text,
+    &__input {
+        box-sizing: border-box;
+    }
+
+    &__button {
+        width: $button-side;
+        height: $button-side;
+        min-width: $button-side;
+        min-height: $button-side;
+        padding: 5px 6px 7px;
+
+        &.button--primary {
+            margin-left: 12px;
+        }
+    }
+
+    &--placeholder {
+        color: $color-text-placeholder;
+    }
+
+    &--grow {
+        flex-grow: 1;
+
+        .inline-edit-text-area__edit-link {
+            display: none;
+        }
+    }
+
+    &--editing {
+        width: 100%;
+    }
+
+    &__sidebar {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    &-text-area {
+        max-height: inherit;
+
+        .scrollbar-container {
+            overflow: hidden;
+        }
+
+        &__container {
+            width: 100%;
+            max-height: inherit;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &.inline-edit--editing {
+            min-height: $text-area-min-height;
+
+            .scrollbar-container,
+            .inline-edit__display-text {
+                min-height: $text-area-min-height;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        .inline-edit {
+            &__input {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+
+                textarea {
+                    overflow: auto;
+                }
+            }
+
+            &__display-text {
+                padding-right: #{($form-input-right-left-padding + $form-input-border-width) * 2};
+                padding-bottom: #{$form-input-top-padding + $form-input-bottom-padding + ($form-input-border-width * 2)};
+                white-space: pre-wrap;
+                word-break: break-all;
+            }
+
+            &__display-text,
+            &__input,
+            &__input textarea {
+                font-size: 15px;
+                max-height: inherit;
+            }
+        }
+    }
+
+    &-text-input {
+        height: 100%;
+        align-items: baseline;
+        &.inline-edit--editing {
+            align-items: stretch;
+        }
+
+        .inline-edit {
+            &__button {
+                padding: 6px 11px 6px;
+            }
+
+            &__display-text {
+                max-width: 100%;
+                @include text-truncate();
+                padding: #{$form-input-top-padding + $form-input-border-width} #{$form-input-right-left-padding + $form-input-border-width}
+                    #{$form-input-bottom-padding + $form-input-border-width};
+
+                &--enabled:hover {
+                    color: $color-text-link--hover;
+                    cursor: pointer;
+                }
+            }
+
+            &__display-text,
+            &__input {
+                line-height: $form-input-line-height;
+                min-height: calc(
+                    #{$form-input-line-height} + #{$form-input-top-padding + $form-input-bottom-padding +
+                        (
+                            $form-input-border-width * 2
+                        )}
+                );
+                @include font-size(22);
+                display: inline-block;
+            }
+        }
+    }
+}

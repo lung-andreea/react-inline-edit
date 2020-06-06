@@ -1,0 +1,84 @@
+@import '../../settings/variables';
+@import '../../mixins/mixins';
+
+$button-normal: $blue60;
+$button-hover: $blue40;
+$button-click: $blue80;
+$button-disabled: $grey20;
+
+.button--primary,
+.button--secondary,
+.button--simple {
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 0.2px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        cursor: default;
+    }
+}
+
+.button--primary,
+.button--secondary {
+    line-height: 18px;
+    min-width: 73px;
+    padding: 5px 14px 7px 14px;
+    font-size: 15px;
+    margin-right: $spacing-small;
+    border-color: $button-normal;
+
+    &:hover,
+    &:focus {
+        border-color: $button-hover;
+    }
+
+    &:active {
+        border-color: $button-click;
+    }
+
+    &:disabled {
+        border-color: $button-disabled;
+        background-color: $button-disabled;
+        color: $white;
+    }
+
+    &.button--large {
+        padding: 8px 20px 10px 20px;
+        min-width: 87px;
+    }
+}
+
+.button--primary {
+    color: $white;
+    background-color: $button-normal;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+        background-color: $button-hover;
+    }
+    &:active:not(:disabled) {
+        background-color: $button-click;
+    }
+}
+
+.button--secondary {
+    background-color: $white;
+    color: $button-normal;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+        color: $button-hover;
+    }
+    &:active:not(:disabled) {
+        color: $button-click;
+    }
+}

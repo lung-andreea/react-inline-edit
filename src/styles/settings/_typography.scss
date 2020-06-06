@@ -1,0 +1,29 @@
+// Typography
+// --------------------------------------------------
+
+////
+//// @group typography
+////
+
+/// Defaults to 16px for most browsers. Needs changing if we ever change the font-size for the root html tag.
+
+/// Default font family
+$default-font-family: 'Lato', sans-serif;
+
+/// Default font size
+$default-font-size: 15px;
+
+/// Default line height
+$default-line-height: 22px;
+
+/// Fixed font default size
+$fixed-font-size: 15px;
+
+/// Font weight light
+$light: 100;
+
+/// Font weight regular
+$regular: 400;
+
+/// Font weight bold
+$bold: 700;

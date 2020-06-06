@@ -1,0 +1,32 @@
+$pixels-per-rem: 16;
+
+/// Font Size
+/// --------------------------------------------------
+/// Mixin to set the font size in rem instead of px, provides a fallback in px also.
+///
+/// @access public
+/// @param {Number} $pxSize [1.25] - The font size in pixels (without the "rem")
+///
+/// @example scss - Usage. This will set the font size to 14px respectively to 0.875rem
+///    body {
+///      @include font-size(14);
+///    }
+@mixin font-size($pxSize) {
+  font-size: $pxSize + px; // fallback for old browsers
+  font-size: ($pxSize / $pixels-per-rem) + rem;
+}
+
+/// Text truncate
+/// --------------------------------------------------
+/// Mixin that handles text overflow by truncating and placing an ellipsis at the end
+///
+/// @access public
+/// @example scss - Usage
+///   .text-truncate {
+///     @include text-truncate();
+///   }
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,38 @@
+@import '../../settings/variables';
+@import '../../mixins/mixins';
+
+.autoresize-input {
+    position: relative;
+    overflow: hidden;
+
+    &__text,
+    &__sizer {
+        box-sizing: border-box;
+        margin: 0;
+        min-height: 32px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        white-space: pre-wrap;
+        line-height: 1.5em;
+    }
+
+    &__text {
+        resize: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    &__sizer {
+        @include font-size(14);
+        padding: #{$form-input-top-padding + $form-input-border-width} #{$form-input-right-left-padding + $form-input-border-width}
+            #{$form-input-bottom-padding + $form-input-border-width};
+        visibility: hidden;
+        opacity: 0;
+    }
+}

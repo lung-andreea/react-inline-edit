@@ -1,0 +1,57 @@
+@import '../../settings/variables';
+
+a,
+.link {
+    color: $color-text-link;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:active,
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &--disabled {
+        color: $color-text-link--disabled;
+        cursor: default;
+
+        &:active,
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &--secondary {
+        color: $color-text-link-secondary;
+
+        &:active,
+        &:hover {
+            color: $color-text-link-secondary--hover;
+        }
+
+        &.link--disabled,
+        &.link--disabled:active,
+        &.link--disabled:hover {
+            color: $color-text-link-secondary--disabled;
+        }
+    }
+
+    &--light {
+        color: $color-text-link-light;
+
+        &:active,
+        &:hover {
+            color: $color-text-link-light--hover;
+        }
+
+        &.link--disabled,
+        &.link--disable:active,
+        &.link--disabled:hover {
+            color: $color-text-link-light--disabled;
+        }
+    }
+}
