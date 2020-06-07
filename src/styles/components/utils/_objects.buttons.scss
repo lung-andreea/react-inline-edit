@@ -7,40 +7,22 @@ $button-click: $blue80;
 $button-disabled: $grey20;
 
 .button--primary,
-.button--secondary,
-.button--simple {
-    box-sizing: border-box;
-    border: 1px solid;
-    border-radius: 2px;
-    cursor: pointer;
-    font-family: inherit;
-    letter-spacing: 0.2px;
-
-    &:last-child {
-        margin-right: 0;
-    }
-
-    &:focus {
-        outline: none;
-    }
-
-    &:disabled {
-        cursor: default;
-    }
-}
-
-.button--primary,
 .button--secondary {
+    cursor: pointer;
     line-height: 18px;
-    min-width: 73px;
-    padding: 5px 14px 7px 14px;
+    border: 1px solid $button-normal;
+    border-radius: 50%;
+    font-family: inherit;
     font-size: 15px;
-    margin-right: $spacing-small;
-    border-color: $button-normal;
+    margin-right: 8px;
 
     &:hover,
     &:focus {
         border-color: $button-hover;
+    }
+
+    &:focus {
+        outline: none;
     }
 
     &:active {
@@ -51,11 +33,7 @@ $button-disabled: $grey20;
         border-color: $button-disabled;
         background-color: $button-disabled;
         color: $white;
-    }
-
-    &.button--large {
-        padding: 8px 20px 10px 20px;
-        min-width: 87px;
+        cursor: default;
     }
 }
 

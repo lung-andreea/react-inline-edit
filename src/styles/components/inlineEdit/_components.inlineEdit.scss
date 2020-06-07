@@ -12,11 +12,10 @@
     }
 
     &__button {
-        width: $button-side;
-        height: $button-side;
+        width: 46px;
+        height: 40px;
         min-width: $button-side;
         min-height: $button-side;
-        padding: 5px 6px 7px;
 
         &.button--primary {
             margin-left: 12px;
@@ -42,6 +41,7 @@
     &__sidebar {
         display: inline-block;
         white-space: nowrap;
+        margin-left: 10px;
     }
 
     &-text-area {
@@ -49,6 +49,10 @@
 
         .scrollbar-container {
             overflow: hidden;
+        }
+
+        &__edit-link {
+            padding: 0 7px;
         }
 
         &__container {
@@ -87,7 +91,6 @@
                 padding-right: #{($form-input-right-left-padding + $form-input-border-width) * 2};
                 padding-bottom: #{$form-input-top-padding + $form-input-bottom-padding + ($form-input-border-width * 2)};
                 white-space: pre-wrap;
-                word-break: break-all;
             }
 
             &__display-text,
@@ -95,6 +98,7 @@
             &__input textarea {
                 font-size: 15px;
                 max-height: inherit;
+                padding: 4px 7px;
             }
         }
     }
@@ -108,13 +112,13 @@
 
         .inline-edit {
             &__button {
-                padding: 6px 11px 6px;
+                height: auto;
             }
 
             &__display-text {
                 max-width: 100%;
                 @include text-truncate();
-                padding: #{$form-input-top-padding + $form-input-border-width} #{$form-input-right-left-padding + $form-input-border-width}
+                padding: #{$form-input-top-padding + $form-input-border-width} #{$form-input-right-left-padding + $form-input-border-width - 4}
                     #{$form-input-bottom-padding + $form-input-border-width};
 
                 &--enabled:hover {

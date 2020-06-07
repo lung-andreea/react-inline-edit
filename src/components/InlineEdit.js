@@ -148,10 +148,10 @@ class InlineEdit extends React.Component {
                     {isEditing && (
                         <>
                             <Button primary className="inline-edit__button" onClick={this.onConfirm}>
-                                <i className="fo-icon fo-icon-Correct" />
+                                <i className="fa fa-check" />
                             </Button>
                             <Button secondary className="inline-edit__button" onClick={this.onCancel}>
-                                <i className="fo-icon fo-icon-Incorrect" />
+                                <i className="fa fa-times" aria-hidden="true" />
                             </Button>
                         </>
                     )}
