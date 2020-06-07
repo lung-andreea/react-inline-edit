@@ -20,13 +20,8 @@ App runs locally into the Browser on port 3000
 
 ## Demo
 
-<iframe
-     src="https://codesandbox.io/embed/async-rgb-u1qbj?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="async-rgb-u1qbj"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
+CodeSandbox code for demo here:
+https://codesandbox.io/s/async-rgb-u1qbj?fontsize=14&hidenavigation=1&theme=dark
    
 ## Usage
 There are two usages for our component. You can either use it as:
