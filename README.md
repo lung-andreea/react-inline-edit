@@ -21,7 +21,7 @@ App runs locally into the Browser on port 3000
 ## Demo
 
 CodeSandbox code for demo here:
-https://codesandbox.io/s/async-rgb-u1qbj?fontsize=14&hidenavigation=1&theme=dark
+https://codesandbox.io/embed/async-rgb-u1qbj?fontsize=14&hidenavigation=1&theme=dark
    
 ## Usage
 There are two usages for our component. You can either use it as:
