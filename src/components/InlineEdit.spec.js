@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createSandbox, expect } from 'testStack';
-import { $r, renderComponent, unmountComponent } from 'app/common/ReactTestUtilsWrapper';
+import { $r, renderComponent, unmountComponent } from 'src/utils/ReactTestUtilsWrapper';
 import InlineEdit, {keyCode} from './InlineEdit';
-import Link from 'app/common/components/link/Link';
+import Link from "../utils/Link";
 
 const InlineEditLink = ({ startEdit }) => <Link onClick={startEdit} className="inline-edit-start-editing" />;
 

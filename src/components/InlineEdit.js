@@ -164,9 +164,8 @@ class InlineEdit extends React.Component {
 }
 
 InlineEdit.propTypes = {
-    textField: PropTypes.node,
     className: PropTypes.string,
-    sidebar: PropTypes.func,
+    sidebar: PropTypes.object,
     children: PropTypes.func,
     initialValue: PropTypes.string,
     isDisabled: PropTypes.bool,

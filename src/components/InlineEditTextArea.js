@@ -37,7 +37,6 @@ const InlineEditTextArea = props => {
 };
 
 InlineEditTextArea.propTypes = {
-    textField: PropTypes.node,
     className: PropTypes.string,
     children: PropTypes.node,
     initialValue: PropTypes.string,
